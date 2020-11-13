@@ -3,7 +3,7 @@
 This is an example of multiplayer architecture with "smart" clients. 
 The clients (Unity) do most of the work; the server (node.js) mostly validates and broadcast the changes of state.
 
-The client's source is [downloadable separately as a unitypackage](#).
+The client's source is [downloadable separately as a unitypackage](https://drive.google.com/file/d/1n0Plf66cGGUUr-70J6H_RElZBKK6i7G9/view?usp=sharing).
 
 This architecture involves "networked objects" that are tracked by an individual client referred to as "owner". 
 
@@ -130,7 +130,7 @@ Attached to all avatars, it translates a player's DNA (an array of float storing
 
 Handles the animations based on the delta position, an easy way to avoid sending animation data.
 
-### FirstPersonInteraction.cs** 
+### FirstPersonInteraction.cs
 
 Contains examples for several features such as instantiating net objects.
 
@@ -157,7 +157,7 @@ All clients should run the same code so you need to rebuild, close and reopen th
 You should see the WebGL build that comes with this repository
 
 ### Building an executable client
-* Download the client package*****************
+* Download the [client package](https://drive.google.com/file/d/1n0Plf66cGGUUr-70J6H_RElZBKK6i7G9/view?usp=sharing)
 * Create a new unity project and import the package
 * Test it in the editor first
 * Build an executable for your system File > build settings > Build
