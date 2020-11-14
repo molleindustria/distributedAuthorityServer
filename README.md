@@ -211,34 +211,36 @@ Always keep in mind that Glitch projects go to sleep when inactive so they may r
 
 # Troubleshooting
 
-Unity compiling Error:
+* Unity compiling Error:
 `UnauthorizedAccessException: Access to the path ...` 
 Possible solution: Unity is trying to create a file in a folder in user. Make sure your server.js is not running locally CTRL+C / CMD+C.
 
-Unity runtime error:
+* Unity runtime error:
 `An error has occurred in sending data`
 Possible solution: server.js is not running or crashed, fix the error there
 
-Browser says
+* Browser says
 `This site can’t be reached`
 Possible solution: make sure server.js is running.
 Make sure the ports on the browser URL, the PORT on server.js, and the port on socketIO controller are the same (eg 3000)
 
-On broswer the loading bar is stuck on 90%    
+* On broswer the loading bar is stuck on 90%    
 Possible solution: Unity > Project settings > Player > WebGL (html5 icon) tab at the bottom > Compression format > Disabled
 
-Browser console error:
+* Browser console error:
 `ReferenceError: io is not defined`
 or
 `error ERR_CONNECTION_REFUSED socket.io/socket.io.js`
-Possible solution: it's probably the missing link to socket.io point 2 above
+Possible solution: it's probably the missing link to socket.io, Make sure that the webGL template is selected and that it corresponds to the right unity version
 
+* Browser console error:
 `VM206:1 GET https://localhost/socket.io/?EIO=3&transport=polling&t=NGnQ_L0 net::ERR_CONNECTION_REFUSED`
-Possible solution: it's probably an secure connection issue. 
+Possible solution: it's probably a secure connection issue. 
 In Unity find socketIO controller on the scene, uncheck ssl enabled.
 You may encounter the inverse error when you publish on a https domain, it may refuse connection 
 
-
+* The client build works locally but not online (e.g. glitch) or viceversa. 
+It's normal: the socket manager needs an url, a port, and an SSL/no SSL boolean, to connect. Glitch or heroku use slighly different settings that are hardcoded in the client build. Change them on the inspector of SocketIOController.cs or override them from NetManager, look for the "GLITCH" boolean for example. 
 
 # JSON and Serializing
 

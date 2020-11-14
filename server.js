@@ -48,7 +48,7 @@ if (fs.existsSync("db.json")) {
     print("Loading game state...");
     let rawdata = fs.readFileSync('db.json');
     //parse it as the gameState
-    if (rawdata != null) {
+    if (rawdata != null && rawdata !="") {
         gameState = JSON.parse(rawdata);
     }
 }
