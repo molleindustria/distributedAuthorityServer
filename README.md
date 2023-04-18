@@ -5,7 +5,7 @@ The clients (Unity) do most of the work; the server (node.js) mostly validates a
 
 The client's source is [in a different repository](https://github.com/molleindustria/distributedAuthorityClient).
 
-This is a [video overview] (https://www.youtube.com/watch?v=G1P_dNi1eA0&ab_channel=molleindustria)
+This is a [video overview](https://www.youtube.com/watch?v=G1P_dNi1eA0&ab_channel=molleindustria)
 
 This architecture involves "networked objects" that are tracked by an individual client referred to as "owner". 
 
